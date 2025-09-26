@@ -1,0 +1,1079 @@
+
+<!DOCTYPE html><html lang="tr-TR" data-theme="light"><head><title>Bundle</title><meta charSet="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@bundle_news"><meta name="twitter:title" content="Kendine Has Sunar: Sokak Hayvanlarına Destek için Başlatılan Barınarock Konserleri Tüm Hızıyla Devam Ediyor!"><meta name="twitter:description" content="&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Var Bi Hayalimiz kampanyasıyla herkese ve her şeye saygıyı savunan Kendine Has, 2024’te başlattığı Barınarock konserlerine 2025’te de devam ediyor. Tüm canlıların birlikte huzur içinde yaşayabileceği bir dünyayı hayal eden Kendine Has sunar: Barınarock konserlerinin tüm geliri sokak hayvanları için bağışlanıyor.&lt;/span&gt;&lt;/p&gt;"><meta name="twitter:image" content="https://static.bundle.app/studio/e8c4839b-8208-44ab-83ad-b483c5d3f8f5/497d810d-60db-4d7c-bf42-6b8b008f5e54.jpg"><script src="https://kit.fontawesome.com/02ddfbc9cb.js" crossorigin="anonymous"></script><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;700&amp;display=swap" rel="stylesheet"><style>@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@font-face {
+  font-family: "Kalista_Script_Regular";
+  src: url("https://static.bundle.app/fonts/Kalista_Script_Regular.otf");
+}
+
+.popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 213px;
+  background: rgba(0, 0, 0, 1);
+  background-blend-mode: overlay;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 0px 100px 0px #000;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  display: none; /* Hide popup by default */
+}
+.close {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  background: rgba(194, 194, 194, 0.5);
+  border: none;
+  cursor: pointer;
+}
+.close svg {
+  width: 12px;
+  height: 12px;
+}
+.download {
+  font-family: Barlow, sans-serif;
+  width: 100%;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #e82027;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+.title {
+  font-family: Barlow, sans-serif;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: -0.65px;
+}
+.title span {
+  font-weight: 800;
+}
+/* Media query for mobile devices */
+@media screen and (max-width: 600px) {
+  .popup {
+    display: none; /* TODO: check is mobile or is web */
+  }
+}
+
+* {
+  font-variant-numeric: lining-nums;
+}
+
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --header-border-bottom-color: #fff;
+  --title-primary-color: #161616;
+  --brand-color: #0a0e12;
+  --brand-publish-date-color: #9c9c9c;
+  --image-text-color: #9c9c9c;
+  --paragraph-primary-color: #000000;
+  --recommended-primary-color: #262d33;
+  --recommended-p-primary-color: #4b5157;
+  --editor-p-primary-color: #262d33;
+  --editor-primary-color: #000000;
+  --editor-summary-primary-color: #262d33;
+  --editor-follow-bg: #000;
+  --editor-follow-text: #fff;
+  --recommended-wrapper-bg: #f8f8f8;
+  --button-primary-color: rgba(0, 0, 0, 1);
+  --button-primary-bg: var(--color-bg);
+  --button-primary-border: rgba(0, 0, 0, 1);
+  --ai-button-text: rgba(156, 156, 156, 1);
+}
+
+[data-theme="dark"] {
+  --color-bg: #0a0e12;
+  --header-border-bottom-color: #0a0e12;
+  --title-primary-color: #ffffff;
+  --brand-color: #e4e4e4;
+  --brand-publish-date-color: #4a4e52;
+  --image-text-color: #4a4e52;
+  --paragraph-primary-color: #fff;
+  --recommended-primary-color: #ffffff;
+  --recommended-p-primary-color: #e4e4e4;
+  --editor-p-primary-color: #ffffff;
+  --editor-primary-color: #e4e4e4;
+  --editor-summary-primary-color: #e4e4e4;
+  --editor-follow-bg: #fff;
+  --editor-follow-text: #000;
+  --recommended-wrapper-bg: #121a21;
+  --button-primary-color: rgba(255, 255, 255, 1);
+  --button-primary-bg: var(--color-bg);
+  --button-primary-border: rgba(255, 255, 255, 1);
+  --ai-button-text: rgba(179, 186, 193, 1);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+}
+
+@font-face {
+  font-family: "Meta_Serif_Light";
+  src: url("https://static.bundle.app/fonts/MetaSerifPro-Light.ttf");
+}
+
+p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+p,
+span {
+  font-family: "Helvetica", "Barlow", sans-serif;
+}
+
+.wrapper {
+  max-width: 698px;
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+}
+
+.quotation-wrapper {
+  max-width: 698px;
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+}
+
+#header {
+  display: flex;
+  align-items: "center";
+  height: 97px;
+  margin-bottom: 2rem;
+  position: relative;
+  border-bottom: 1px solid var(--header-border-bottom-color);
+}
+
+#header .logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #444648;
+  width: 75px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header .app-link {
+  position: absolute;
+  right: 15%;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header .app-link a {
+  font-family: "Inter";
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#header .app-link a > span {
+  font-weight: 800 !important;
+}
+
+#header .switch-wrapper {
+  position: absolute;
+  right: 35%;
+  top: 0;
+  width: 42px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header .logo img {
+  width: 16px;
+  height: 14px;
+}
+
+#header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+#header .brandLogo {
+  margin-right: auto;
+}
+
+#header .brandLogo img,
+#header img.brandLogo {
+  max-height: 60px;
+}
+
+#header img.studioLogo {
+  display: block;
+  height: 24px;
+}
+
+.title-primary {
+  color: var(--title-primary-color);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  padding: 0.5rem 0 2rem 0;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.recommended-primary {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.28em;
+  padding: 20px 0 10px 0;
+  color: var(--recommended-primary-color);
+  margin: 3% 0;
+  float: left;
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+}
+
+.brandName-primary {
+  font-family: "Roboto", sans-serif;
+  color: var(--brand-color);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 31px;
+  letter-spacing: -0.005em;
+  text-align: left;
+  margin-left: 10px;
+  float: left;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.brandName-primary img {
+  height: 15px;
+  width: 9px;
+  margin: 0 5px;
+}
+
+.verticalLine {
+  width: 1px;
+  height: 10px;
+  background-color: var(--brand-publish-date-color);
+  margin: 0 5px;
+}
+
+.publishDate {
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--brand-publish-date-color);
+  line-height: 31px;
+  letter-spacing: -0.005em;
+  text-align: left;
+  float: left;
+  padding: 0;
+  font-style: italic;
+}
+
+.source-primary {
+  color: #8a9898;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  margin: 10px 0;
+  text-decoration-color: #8a9898;
+}
+
+.quotation-primary {
+  font-weight: 500;
+  margin: 2% 0 3% 0;
+}
+
+.quotation-primary p {
+  font-size: 19px;
+  color: var(--paragraph-primary-color);
+  font-style: italic;
+  font-family: "Playfair Display";
+  line-height: 30px; /* 158.824% */
+  letter-spacing: -0.085px;
+}
+
+.signature-primary {
+  font-family: "Kalista_Script_Regular";
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 87px;
+  letter-spacing: -0.005em;
+  text-align: left;
+  padding: 3% 0 0;
+  color: var(--paragraph-primary-color);
+}
+
+.editorIntroduction-primary {
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  float: left;
+  padding: 4% 0;
+  margin: 2% 0;
+}
+
+.editorImage-primary {
+  width: 70px;
+  border-radius: 50%;
+  height: 70px;
+  position: relative;
+  float: left;
+  margin-right: 2%;
+}
+
+.editorName-primary {
+  color: var(--editor-primary-color);
+  float: left;
+  font-size: 18px;
+  font-weight: 800;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.editorTwitter-primary {
+  float: left;
+  color: var(--editor-follow-text);
+  background-color: var(--editor-follow-bg);
+  padding: 7px 6px 5px 8px;
+  font-size: 11px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+.editor-contact {
+  float: left;
+  width: 70%;
+  clear: right;
+  margin: 1% 0;
+  display: flex;
+  justify-content: end;
+}
+
+.editorMail-primary {
+  color: var(--editor-primary-color);
+  padding: 6px 0;
+  float: left;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+.editor {
+  width: 100%;
+  float: left;
+}
+
+.editorInfo {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.editorFollow-primary {
+  color: var(--editor-follow-text);
+  background-color: var(--editor-follow-bg);
+  width: 35px;
+  padding: 6px 15px 6px 15px;
+  float: left;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 1%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.editorFollow-primary i {
+  margin-left: 13%;
+}
+
+.editorSummary-primary {
+  width: 100%;
+  float: left;
+  margin-top: 1%;
+  color: var(--editor-summary-primary-color, #262d33);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.editorSummary-primary p {
+  font-family: "Roboto", sans-serif;
+}
+
+.subtitle-primary {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.5em;
+  padding: 20px 0 10px 0;
+  color: var(--title-primary-color);
+}
+
+.paragraph-primary {
+  padding: 5px 0;
+  font-size: 18px;
+  line-height: 2em;
+  font-family: "Roboto", sans-serif;
+}
+
+.paragraph-primary p strong {
+  padding: 1px 0;
+  font-size: 19px;
+  line-height: 1.9em;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.paragraph-primary p {
+  padding: 10px 0 !important;
+  margin-top: 10px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-size: 19px;
+  color: var(--paragraph-primary-color);
+}
+
+ul {
+  list-style: none;
+}
+ul li:before {
+  content: "•";
+  font-size: 13pt;
+  padding-right: 12px;
+}
+
+.paragraph-primary ul {
+  padding-left: 10px;
+  margin: 0;
+}
+
+.paragraph-primary ul li {
+  color: var(--paragraph-primary-color);
+}
+
+.image-primary {
+  display: block;
+  width: 100%;
+  border: 0;
+  margin: 20px 0 5px 0;
+  border-radius: 8px;
+}
+
+.image-text {
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Roboto";
+  color: var(--image-text-color);
+  font-size: 11px;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  position: relative;
+  float: left;
+}
+
+.brandImage-primary {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  padding: 0;
+  float: left;
+  border-radius: 50%;
+  margin-bottom: 1%;
+}
+
+.button-primary {
+  display: block;
+  font-family: "Roboto", "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 28px;
+  margin: 15px 0;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-color);
+  border: 1px solid var(--button-primary-border);
+}
+
+.ai-button-primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Roboto", "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 28px;
+  margin: 15px 0;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 53px;
+  margin-top: 50px;
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-color);
+  border: 1px solid var(--button-primary-border);
+}
+
+.ai-button-primary svg path#bundleaitext {
+  fill: var(--button-primary-color);
+}
+
+.ai-button-primary span {
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ai-button-text);
+}
+
+.ai-button-primary span > span {
+  margin-bottom: -1px;
+}
+
+.youtube-primary {
+  margin: 30px 0 15px 0;
+}
+
+.youtube-primary .youtube-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin: 0 auto;
+}
+
+.youtube-primary iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.footer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 20px 0;
+  background-color: #161d24;
+  border-top: 1px solid var(--header-border-bottom-color);
+}
+
+.footer .footerWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.footer .brandLogo {
+  margin-right: auto;
+}
+
+.footer .brandLogo img,
+.footer img.brandLogo {
+  max-height: 60px;
+}
+
+.footer img.studioLogo {
+  display: block;
+  height: 24px;
+}
+
+#recommended {
+  margin-top: 3%;
+}
+
+#recommended p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--recommended-p-primary-color);
+}
+
+.card-img-top {
+  width: 40%;
+  border-radius: 8px;
+  max-height: 229px;
+  float: left;
+  margin-right: 4%;
+}
+
+.card-body {
+  width: 56%;
+  float: left;
+}
+
+.card-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  padding: 0 0 5px 0;
+  font-size: 22px;
+  color: var(--paragraph-primary-color);
+}
+
+.card-text {
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #000000;
+  width: 100%;
+  float: left;
+  position: relative;
+  margin-bottom: 4%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 1% 0 6% 0;
+}
+
+@media only screen and (max-width: 1023px) {
+  .wrapper {
+    width: 88%;
+  }
+  .quotation-wrapper {
+    width: 98%;
+  }
+  .footer img.studioLogo {
+    height: 16px;
+  }
+  #header .brandLogo img,
+  #header img.brandLogo {
+    max-height: 50px;
+  }
+  .footer .brandLogo img,
+  .footer img.brandLogo {
+    max-height: 50px;
+  }
+  .quotation-primary {
+    padding: 0 4%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #recommended .card-link {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10%;
+  }
+
+  .editor-contact {
+    width: 60%;
+  }
+}
+.sliderThemeText {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-left: 60px;
+}
+
+@media only screen and (max-width: 430px) {
+  #header .switch-wrapper {
+    right: 6%;
+  }
+  .sliderThemeText {
+    margin-left: -60px;
+  }
+  #header .logo,
+  #header .app-link {
+    display: none;
+  }
+  #header {
+    height: 55px;
+  }
+  #header img.studioLogo {
+    display: block;
+    height: 19px;
+  }
+  .recommended-wrapper {
+    margin-top: 3rem;
+    background-color: var(--recommended-wrapper-bg);
+    overflow: auto;
+  }
+  .title-primary {
+    padding: 0.5rem 0 2rem 0;
+  }
+  .editorImage-primary {
+    width: 89px;
+    height: 85px;
+    margin-right: 5%;
+  }
+
+  .editor-contact {
+    width: 60%;
+    margin: 2% 0;
+    justify-content: start;
+  }
+
+  .editorName-primary {
+    width: 74%;
+    margin-top: 1%;
+  }
+
+  .editorMail-primary {
+    margin-right: 3%;
+    padding-right: 10px;
+  }
+
+  .editor {
+    width: 60%;
+  }
+
+  .editorFollow-primary {
+    width: 35px;
+    margin-right: 3%;
+  }
+
+  .editorInfo {
+    display: block;
+  }
+
+  .editorIntroduction-primary {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    float: left;
+    padding: 6% 0;
+    margin-top: 4%;
+    margin-bottom: 2%;
+  }
+
+  .editorSummary-primary {
+    margin-top: 2%;
+  }
+
+  .image-text {
+    margin-bottom: 5%;
+  }
+
+  .title-primary {
+    line-height: 1.15em;
+  }
+
+  .subtitle-primary {
+    font-size: 26px;
+    padding-top: 10px;
+  }
+
+  .card-link {
+    width: 48%;
+    margin-right: 4%;
+  }
+
+  .card-link:last-child {
+    margin-right: 0;
+  }
+
+  .card-img-top {
+    width: 100%;
+  }
+
+  .card-title {
+    line-height: 32px;
+    padding: 20px 0 5px 0;
+    margin-top: 2%;
+    font-size: 22px;
+  }
+
+  .card-body {
+    width: 100%;
+  }
+
+  .recommended-primary {
+    font-size: 26px;
+  }
+
+  .paragraph-primary {
+    line-height: 34px;
+  }
+
+  .quotation-wrapper {
+    width: 96%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #header .logo,
+  #header .app-link {
+    display: none;
+  }
+  #header {
+    height: 55px;
+  }
+  .editorName-primary {
+    width: 68%;
+  }
+  #header img.studioLogo {
+    display: block;
+    height: 19px;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #303539;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 16px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+input:checked + .slider {
+  background-color: rgba(115, 136, 252, 1);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#div-gpt-ad-1758286595464-0 {
+  margin-top: 20px;
+  overflow: hidden;
+}</style><script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><!-- BEGIN: GOOGLE ANALYTICS--><script>window.dataLayer = window.dataLayer || []; 
+function gtag() {
+    dataLayer.push(arguments);
+}   
+gtag("js", new Date());
+gtag("config", `G-7PNZ5E4JDZ`);</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-7PNZ5E4JDZ"></script><!-- END: GOOGLE ANALYTICS--><!-- BEGIN: JAVASCRIPT--><script>var ANALYTICS_CAMPAIGN_NAME = `kendinehas-aa-eylul-2025`;window.addEventListener("DOMContentLoaded", (event) => {
+  const switchTheme = document.getElementById("switch-theme");
+
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    document.querySelector("html").setAttribute("data-theme", "dark");
+    switchTheme.checked = true;
+    sliderText = document.querySelector(".sliderThemeText");
+    sliderText.innerHTML = "LIGHT";
+  } else {
+    document.querySelector("html").setAttribute("data-theme", "light");
+    switchTheme.checked = false;
+    sliderText = document.querySelector(".sliderThemeText");
+    sliderText.innerHTML = "DARK";
+  }
+
+  switchTheme.addEventListener("change", (e) => {
+    console.log(e.target.checked);
+    document
+      .querySelector("html")
+      .setAttribute("data-theme", e.target.checked ? "dark" : "light");
+    sliderText = document.querySelector(".sliderThemeText");
+    sliderText.innerHTML = e.target.checked ? "LIGHT" : "DARK";
+    localStorage.setItem("theme", e.target.checked ? "dark" : "light");
+  });
+
+  function pushEvent(action, label) {
+    console.debug("pushEvent", label, ANALYTICS_CAMPAIGN_NAME, action);
+
+    gtag("event", action, {
+      event_category: ANALYTICS_CAMPAIGN_NAME,
+      event_label: label,
+      campaign: ANALYTICS_CAMPAIGN_NAME,
+    });
+  }
+
+  var scrollImpressionLock = [];
+  var dataAnalyticsAttributeName = "data-analytics-val";
+
+  // SEND IMPRESSION EVENT
+  pushEvent("item_impression", ANALYTICS_CAMPAIGN_NAME);
+
+  // SEND IMPRESSION EVENT FOR TITLE
+  window.addEventListener(
+    "scroll",
+    function (event) {
+      var top = this.scrollY;
+      var impressionElements = document.querySelectorAll(
+        ".title-primary,.subtitle-primary,.button-primary,.youtube-primary,.button-primary",
+      );
+
+      for (var index = 0; index < impressionElements.length; index++) {
+        if (typeof scrollImpressionLock[index] === "undefined") {
+          var element = impressionElements[index];
+          var title = "impression: ";
+
+          if (element.offsetTop <= top + window.innerHeight) {
+            scrollImpressionLock[index] = false;
+            title += element.getAttribute(dataAnalyticsAttributeName);
+            pushEvent("item_impression", title);
+          }
+        }
+      }
+    },
+    false,
+  );
+
+  // SEND CLICK EVENT FOR BUTTON
+  document.querySelectorAll(".button-primary").forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      pushEvent(
+        "item_impression",
+        "click button: " + this.getAttribute(dataAnalyticsAttributeName),
+      );
+    });
+  });
+
+  // SEND CLICK EVENT FOR IMAGE
+  document.querySelectorAll(".image-primary").forEach(function (button, index) {
+    button.addEventListener("click", function (e) {
+      pushEvent(
+        "item_impression",
+        "click image: " + this.getAttribute(dataAnalyticsAttributeName),
+      );
+    });
+  });
+
+  // SEND CLICK EVENT FOR YOUTUBE
+  document
+    .querySelectorAll(".youtube-primary")
+    .forEach(function (button, index) {
+      button.addEventListener("click", function (e) {
+        pushEvent(
+          "item_impression",
+          "click youtube: " + this.getAttribute(dataAnalyticsAttributeName),
+        );
+      });
+    });
+
+  // SEND CLICK EVENT FOR LINKS
+  document
+    .querySelectorAll(".paragraph-primary a")
+    .forEach(function (button, index) {
+      button.addEventListener("click", function (e) {
+        pushEvent("item_impression", "click paragraph link: " + this.href);
+      });
+    });
+
+  // SEND CLICK EVENT FOR BRAND
+  document.querySelectorAll(".brandImage-primary").forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      pushEvent(
+        "item_impression",
+        "click brand: " + this.getAttribute(dataAnalyticsAttributeName),
+      );
+    });
+  });
+});
+
+function closePopup() {
+  document.querySelector(".popup").style.display = "none";
+  sessionStorage.setItem("popupClosed", "true");
+}
+function redirectToDownload() {
+  window.open("https://bundleapp.onelink.me/gCw6/hmpgbs", "_blank");
+}
+window.onload = function () {
+  if (sessionStorage.getItem("popupClosed") === "true") {
+    document.querySelector(".popup").style.display = "none";
+  }
+};
+</script><!-- END: JAVASCRIPT--></head><body><div id="header" style="background-color:#1E2023;"><div class="logo"><img src="https://static.bundle.app/studio-assets/bundle-logo.png"></div><div class="wrapper"><a href="https://www.bundle.app/" target="_blank" data-analytics-val="https://www.bundle.app/"></a><img class="studioLogo" src="https://static.bundle.app/studio-assets/bundle-studio-logo-v2.png" srcset="https://static.bundle.app/studio-assets/bundle-studio-logo-v2-2x.png 2x"></div><div class="switch-wrapper"><label class="switch"><input type="checkbox" id="switch-theme"><span class="slider"><span class="sliderThemeText">DARK</span></span></label></div><div class="app-link"><a href="https://bundle.app" target="_blank">BUNDLE<span> APP</span></a></div></div><div id="content"></div><div class="wrapper"><a href="https://www.instagram.com/p/DO6K7BxCPdb/" target="_blank" style="display:block;" data-analytics-val="https://static.bundle.app/studio/e8c4839b-8208-44ab-83ad-b483c5d3f8f5/497d810d-60db-4d7c-bf42-6b8b008f5e54.jpg"><img class="image-primary" src="https://static.bundle.app/studio/e8c4839b-8208-44ab-83ad-b483c5d3f8f5/497d810d-60db-4d7c-bf42-6b8b008f5e54.jpg" data-analytics-val="https://static.bundle.app/studio/e8c4839b-8208-44ab-83ad-b483c5d3f8f5/497d810d-60db-4d7c-bf42-6b8b008f5e54.jpg"/><span class="image-text"></span></a></div><div class="wrapper"><div class="title-primary" data-analytics-val="Kendine Has Sunar: Sokak Hayvanlarına Destek için Başlatılan Barınarock Konserleri Tüm Hızıyla Devam Ediyor!">Kendine Has Sunar: Sokak Hayvanlarına Destek için Başlatılan Barınarock Konserleri Tüm Hızıyla Devam Ediyor!</div></div><div class="wrapper"><div class="subtitle-primary" data-analytics-val="3. Barınarock konseri 8 Ekim Çarşamba 21.00’de Eskişehir F Stop’ta Gripin ile!">3. Barınarock konseri 8 Ekim Çarşamba 21.00’de Eskişehir F Stop’ta Gripin ile!</div></div><div class="wrapper"><div class="paragraph-primary"><p><span style="color: rgb(0, 0, 0);">Var Bi Hayalimiz kampanyasıyla herkese ve her şeye saygıyı savunan Kendine Has, 2024’te başlattığı Barınarock konserlerine 2025’te de devam ediyor. Tüm canlıların birlikte huzur içinde yaşayabileceği bir dünyayı hayal eden Kendine Has sunar: Barınarock konserlerinin tüm geliri sokak hayvanları için bağışlanıyor.</span></p></div></div><div id="banner"><div class="bannerMobile" id="div-gpt-ad-1758286595464-0" style="min-width: 300px; min-height: 250px;"></div></div><div class="wrapper"><div class="paragraph-primary"><p><span style="color: rgb(0, 0, 0);">Bu seneki partneri&nbsp;</span><strong style="color: rgb(0, 0, 0);">Kurtaran Ev</strong><span style="color: rgb(0, 0, 0);">&nbsp;olan Barınarock konserleri, Kendine Has’ın Var Bi Hayalimiz diyerek yola çıktığı, yıl geneline yayılan bir konser serisi. Bilet gelirlerinin&nbsp;</span><strong style="color: rgb(0, 0, 0);">tamamı</strong><span style="color: rgb(0, 0, 0);">&nbsp;sokak hayvanları yararına Kurtaran Ev’e bağışlanıyor. 2025 takvimi Haziran’da başladı ve yıl boyunca farklı şehirlerde devam ediyor. Sıradaki durak Eskişehir, sonuncusu da Kasım ayında Ankara'da planlanıyor.</span></p></div></div><div class="wrapper"><img class="image-primary" src="https://static.bundle.app/studio/e8c4839b-8208-44ab-83ad-b483c5d3f8f5/e0c0acb5-c0c5-418b-a613-be3d30cea877.png" data-analytics-val="https://static.bundle.app/studio/e8c4839b-8208-44ab-83ad-b483c5d3f8f5/e0c0acb5-c0c5-418b-a613-be3d30cea877.png"/><span class="image-text"></span></div><div class="wrapper"><div class="subtitle-primary" data-analytics-val="Kendine Has Sunar: Barınarock Konserleri ile 2024’te 550 sokak köpeği kısırlaştırıldı!">Kendine Has Sunar: Barınarock Konserleri ile 2024’te 550 sokak köpeği kısırlaştırıldı!</div></div><div class="wrapper"><div class="paragraph-primary"><p><span style="color: rgb(0, 0, 0);">2024 yılında başlatılan Barınarock serisi; İstanbul, Muğla, Ankara ve Eskişehir’de yıl geneline yayılan&nbsp;</span><strong style="color: rgb(0, 0, 0);">6 konser</strong><span style="color: rgb(0, 0, 0);">&nbsp;ile hayata geçti ve bu bağış sayesinde&nbsp;</span><strong style="color: rgb(0, 0, 0);">Adana, Pozantı’da 550 sokak köpeği kısırlaştırıldı</strong><span style="color: rgb(0, 0, 0);">. Geçen seneden daha büyük hedeflerle yola çıkan projenin 2025 partneri yine&nbsp;</span><strong style="color: rgb(0, 0, 0);">Kurtaran Ev</strong><span style="color: rgb(0, 0, 0);">. Sene içerisinde planlanan konserlerin bilet gelirinin tamamı Kurtaran Ev’e bağışlanarak sokak hayvanlarının yararına kullanılacak.</span></p></div></div><div class="wrapper"><div class="subtitle-primary" data-analytics-val="3. Barınarock Konseri: 8 Ekim Çarşamba, 21.00 – Eskişehir F Stop’ta Gripin!">3. Barınarock Konseri: 8 Ekim Çarşamba, 21.00 – Eskişehir F Stop’ta Gripin!</div></div><div class="wrapper"><div class="paragraph-primary"><p><span style="color: rgb(0, 0, 0);">2025’teki serinin&nbsp;</span><strong style="color: rgb(0, 0, 0);">birincisi</strong><span style="color: rgb(0, 0, 0);">&nbsp;İzmir’de&nbsp;</span><strong style="color: rgb(0, 0, 0);">Ceylan Ertem</strong><span style="color: rgb(0, 0, 0);">&nbsp;ile gerçekleşti;&nbsp;</span><strong style="color: rgb(0, 0, 0);">ikincisi</strong><span style="color: rgb(0, 0, 0);">&nbsp;24 Temmuz’da&nbsp;</span><strong style="color: rgb(0, 0, 0);">Akyaka’da Gripin</strong><span style="color: rgb(0, 0, 0);">&nbsp;ile hayata geçti. Şimdi sıra&nbsp;</span><strong style="color: rgb(0, 0, 0);">üçüncü konserde</strong><span style="color: rgb(0, 0, 0);">:&nbsp;</span><strong style="color: rgb(0, 0, 0);">8 Ekim Çarşamba saat 21.00’de Eskişehir F Stop’ta Gripin</strong><span style="color: rgb(0, 0, 0);">&nbsp;sahnede! Bilet gelirlerinin tamamı, her zaman olduğu gibi, sokak hayvanları için&nbsp;</span><strong style="color: rgb(0, 0, 0);">Kurtaran Ev</strong><span style="color: rgb(0, 0, 0);">’e bağışlanacak.</span></p></div></div><div class="wrapper"><div class="subtitle-primary" data-analytics-val="2025’teki Barınarock Konserleri için takipte kalın!">2025’teki Barınarock Konserleri için takipte kalın!</div></div><div class="wrapper"><div class="paragraph-primary"><p><span style="color: rgb(0, 0, 0);">Bu yıl toplam&nbsp;</span><strong style="color: rgb(0, 0, 0);">4 konser</strong><span style="color: rgb(0, 0, 0);">&nbsp;planlandı. Takvimin devamı için Kendine Has’ı takipte kalın. Konsere gelemeseniz bile&nbsp;</span><strong style="color: rgb(0, 0, 0);">bilet alarak</strong><span style="color: rgb(0, 0, 0);">&nbsp;sokak hayvanlarına destek olabileceğinizi unutmayın! </span></p></div></div><div class="wrapper"><div class="subtitle-primary" data-analytics-val="Var Bi Hayalimiz!">Var Bi Hayalimiz!</div></div><div class="wrapper"><a class="button-primary" href="https://www.instagram.com/p/DO6K7BxCPdb/" target="_blank" data-analytics-val="Keşfet">Keşfet</a></div></body><div class="popup"><div style="display:flex;justify-content:end;padding: 1rem 1rem 0 0;"><button class="close" onclick="closePopup()"><svg data-v-4dac70a3="" width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-4dac70a3="" d="M0.921875 11.4531C0.791667 11.3229 0.705729 11.1719 0.664062 11C0.622396 10.8229 0.622396 10.6484 0.664062 10.4766C0.705729 10.3047 0.789062 10.1562 0.914062 10.0312L4.57812 6.36719L0.914062 2.71094C0.789062 2.58594 0.705729 2.4375 0.664062 2.26562C0.622396 2.09375 0.622396 1.92188 0.664062 1.75C0.705729 1.57292 0.791667 1.41927 0.921875 1.28906C1.04688 1.16406 1.19531 1.08073 1.36719 1.03906C1.54427 0.992188 1.71875 0.992188 1.89062 1.03906C2.06771 1.08073 2.21875 1.16146 2.34375 1.28125L6 4.94531L9.66406 1.28906C9.78906 1.16406 9.9349 1.08073 10.1016 1.03906C10.2734 0.992188 10.4453 0.992188 10.6172 1.03906C10.7943 1.08073 10.9453 1.16667 11.0703 1.29688C11.2057 1.42188 11.2943 1.57292 11.3359 1.75C11.3776 1.92188 11.3776 2.09375 11.3359 2.26562C11.2943 2.4375 11.2083 2.58594 11.0781 2.71094L7.42969 6.36719L11.0781 10.0312C11.2083 10.1562 11.2943 10.3047 11.3359 10.4766C11.3776 10.6484 11.3776 10.8229 11.3359 11C11.2943 11.1719 11.2057 11.3203 11.0703 11.4453C10.9453 11.5755 10.7943 11.6641 10.6172 11.7109C10.4453 11.7526 10.2734 11.7526 10.1016 11.7109C9.9349 11.6693 9.78906 11.5833 9.66406 11.4531L6 7.79688L2.34375 11.4609C2.21875 11.5807 2.06771 11.6641 1.89062 11.7109C1.71875 11.7526 1.54427 11.7526 1.36719 11.7109C1.19531 11.6641 1.04688 11.5781 0.921875 11.4531Z" fill="#7F7F7F" fill-opacity="0.5" style="mix-blend-mode: luminosity;"></path><path data-v-4dac70a3="" d="M0.921875 11.4531C0.791667 11.3229 0.705729 11.1719 0.664062 11C0.622396 10.8229 0.622396 10.6484 0.664062 10.4766C0.705729 10.3047 0.789062 10.1562 0.914062 10.0312L4.57812 6.36719L0.914062 2.71094C0.789062 2.58594 0.705729 2.4375 0.664062 2.26562C0.622396 2.09375 0.622396 1.92188 0.664062 1.75C0.705729 1.57292 0.791667 1.41927 0.921875 1.28906C1.04688 1.16406 1.19531 1.08073 1.36719 1.03906C1.54427 0.992188 1.71875 0.992188 1.89062 1.03906C2.06771 1.08073 2.21875 1.16146 2.34375 1.28125L6 4.94531L9.66406 1.28906C9.78906 1.16406 9.9349 1.08073 10.1016 1.03906C10.2734 0.992188 10.4453 0.992188 10.6172 1.03906C10.7943 1.08073 10.9453 1.16667 11.0703 1.29688C11.2057 1.42188 11.2943 1.57292 11.3359 1.75C11.3776 1.92188 11.3776 2.09375 11.3359 2.26562C11.2943 2.4375 11.2083 2.58594 11.0781 2.71094L7.42969 6.36719L11.0781 10.0312C11.2083 10.1562 11.2943 10.3047 11.3359 10.4766C11.3776 10.6484 11.3776 10.8229 11.3359 11C11.2943 11.1719 11.2057 11.3203 11.0703 11.4453C10.9453 11.5755 10.7943 11.6641 10.6172 11.7109C10.4453 11.7526 10.2734 11.7526 10.1016 11.7109C9.9349 11.6693 9.78906 11.5833 9.66406 11.4531L6 7.79688L2.34375 11.4609C2.21875 11.5807 2.06771 11.6641 1.89062 11.7109C1.71875 11.7526 1.54427 11.7526 1.36719 11.7109C1.19531 11.6641 1.04688 11.5781 0.921875 11.4531Z" fill="#C2C2C2" style="mix-blend-mode: overlay;"></path></svg></button></div><div style="margin-top: 41px; width: 312px; margin: 0 auto"><div style="display: flex; align-items: center"><img src="https://www.bundle.app/_nuxt/img/bottomsheet.9a21869.png" alt="bottomsheet" width="61" style="margin-right: 14px"><div class="title">&Idot;lgini &ccedil;ekecek her &scedil;ey <span>Bundle ile yan&imath;nda!</span></div></div><button class="download" onclick="redirectToDownload()"><svg data-v-4dac70a3="" width="15" height="14" viewbox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-top: 2px;"><path data-v-4dac70a3="" d="M0.000213623 1C0.000213623 0.447716 0.447929 0 1.00021 0H7.50012V8.99989H1.00021C0.447928 8.99989 0.000213623 8.55217 0.000213623 7.99989V1Z" fill="white" fill-opacity="0.5"></path><path data-v-4dac70a3="" d="M7.49989 0H13.9998C14.5521 0 14.9998 0.447715 14.9998 1V12.3332C14.9998 12.8855 14.5521 13.3332 13.9998 13.3332H8.49989C7.9476 13.3332 7.49989 12.8855 7.49989 12.3332V0Z" fill="white"></path></svg><span style="margin-left: 5px">Bundle&rsquo;&imath; hemen indir</span></button></div></div><script>document.addEventListener("DOMContentLoaded", function () {
+
+
+window.addEventListener("hashchange", function () {
+  window.googletag = window.googletag || { cmd: [] };
+  googletag.cmd.push(function () {
+    googletag.pubads().refresh();
+  });
+});</script></html>
